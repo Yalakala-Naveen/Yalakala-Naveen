@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @Yalakala-Naveen
 - 👀 I’m interested in Data Science
-- 🌱 I’m currently learning Machine-Learning
+- 🌱 I’m currently Working on Machine-Learning
 - 📫 reach me on linkedin.com/in/naveen-y-b47090122
 
 <!---
