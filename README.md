@@ -4,7 +4,7 @@
 
 Architect of ADP's production AI Search and AI Assist platforms: hybrid retrieval that improved search precision by 35%, LangGraph multi-agent routing across Payroll, Tax, Benefits and HR, held to 99.9% uptime by evaluation and monitoring pipelines.
 
-Currently building **[FailLoud](https://github.com/Yalakala-Naveen/failloud)** — an open-source verification harness that catches the silent failures LLM agents ship as "done". CLI + MCP server, live now.
+Currently building **[FailLoud](https://github.com/Yalakala-Naveen/failloud)** — an open-source verification harness that catches the silent failures LLM agents ship as "done". CLI + MCP server, live now — v0.2.0 adds hash-chained verification receipts, so every verdict carries an auditable proof instead of a promise.
 
 Portfolio: https://yalakala-naveen.github.io
 LinkedIn: https://www.linkedin.com/in/naveen-y-b47090122
