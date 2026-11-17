@@ -28,6 +28,13 @@ Also in the box: hash-chained verification receipts (a verdict you can prove, no
 - **MCP Registry:** listed as `io.github.Yalakala-Naveen/failloud` in the [official MCP Registry](https://registry.modelcontextprotocol.io)
 - **Code:** https://github.com/Yalakala-Naveen/failloud
 
+## tidy-sheet — messy spreadsheet in, tidy DataFrame out
+
+**[tidy-sheet](https://github.com/Yalakala-Naveen/tidysheet)** — real-world Excel/CSV exports arrive with title rows, merged multi-row headers, totals and footnote rows baked into the data, and pandas detects none of it: everyone hand-rolls the same `skiprows=`/`ffill` glue per file. tidy-sheet detects the structure — title rows, merged headers, totals, footnotes, merged data cells — and returns a clean DataFrame plus a report listing every fix. Deterministic heuristics, no AI in the path.
+
+- **Live demo (runs in your browser, nothing uploads):** https://yalakala-naveen.github.io/tidysheet/
+- **Code:** https://github.com/Yalakala-Naveen/tidysheet
+
 ## Klaviyo Bill Audit — free, in-browser
 
 **[Klaviyo Bill Audit](https://github.com/Yalakala-Naveen/klaviyo-bill-audit)** — you're paying Klaviyo for people who will never buy again. Klaviyo bills on stored profiles; profiles that stopped opening, clicking, or buying 6+ months ago still count, and enough of them quietly push a store into the next price tier. This free audit counts a store's ghost profiles and what they cost every month. It runs 100% in the browser — the export is never uploaded anywhere.
