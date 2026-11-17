@@ -1,10 +1,40 @@
 # Naveen Yalakala
 
-**Forward Deployed Engineer @ ADP** — I build AI systems that survive production.
+**Forward Deployed Engineer — I make agents survive production.**
 
-Architect of ADP's production AI Search and AI Assist platforms: hybrid retrieval that improved search precision by 35%, LangGraph multi-agent routing across Payroll, Tax, Benefits and HR, held to 99.9% uptime by evaluation and monitoring pipelines.
+Forward Deployed Engineer at ADP. Architect of ADP's production AI Search and AI Assist platforms: hybrid retrieval that improved search precision by 35%, LangGraph multi-agent routing across Payroll, Tax, Benefits and HR, held to 99.9% uptime by evaluation and monitoring pipelines.
 
-Currently building **[FailLoud](https://github.com/Yalakala-Naveen/failloud)** — an open-source verification harness that catches the silent failures LLM agents ship as "done". CLI + MCP server + watch mode, live now — v0.2.0 added hash-chained verification receipts, so every verdict carries an auditable proof instead of a promise; v0.3.0 adds watch mode, which re-verifies a pipeline's outputs as they change and seals each verdict automatically; v0.4.0 adds a LangChain adapter, verifying outputs in the loop via a callback handler before the next step builds on them; v0.5.0 adds second-pass verification — every PASS is labelled provisional, and `failloud recheck` re-judges claims and counts against a later system-of-record snapshot (confirmed / contradicted / unverifiable). v0.5.1 adds the `failloud mcp` subcommand — the launch command MCP Registry clients use to start the server. v0.6.0 adds FL006 groundedness for RAG answers — citations must resolve to sources actually retrieved, and every number in the answer must appear in those sources.
+I build the verification layer production AI is missing — the checks that catch an agent claiming "done" when the work isn't.
 
-Portfolio: https://yalakala-naveen.github.io
-LinkedIn: https://www.linkedin.com/in/naveen-y-b47090122
+## FailLoud — the done-check for AI agent output
+
+**[FailLoud](https://github.com/Yalakala-Naveen/failloud)** (v0.6.0) — a deterministic verification harness for LLM agent outputs. Agents rarely fail loudly: they return `status: "done"` with placeholder content, claims with no evidence behind them, counts their own records contradict. Every dashboard stays green because the agent graded its own homework. FailLoud reads the output the way a skeptical reviewer would. No model in the verdict path — every verdict is deterministic and explainable line by line.
+
+Six checks:
+
+| Check | Catches |
+|---|---|
+| FL001 `placeholder_shipped` | Output declared done while the payload is empty or still holds draft scaffolding |
+| FL002 `unbacked_claim` | A claimed action (sent, posted, published…) with no id, URL, receipt, or artifact behind it |
+| FL003 `stale_state` | Work based on state older than allowed, or a state-version skew between handover and run |
+| FL004 `count_mismatch` | A reported count that disagrees with the itemized record in the same document |
+| FL005 `missing_components` | Required fields present-but-empty, and dead stretches inside segmented deliverables |
+| FL006 `unsupported_answer` | A RAG answer whose citations resolve to nothing retrieved, whose cited sources are empty, or whose numbers appear in no source |
+
+Also in the box: hash-chained verification receipts (a verdict you can prove, not just quote), watch mode, second-pass verification against the system of record (every PASS is provisional until the record confirms it), a LangChain adapter, an MCP server, and a GitHub Action for CI.
+
+- **Install:** `pip install failloud` — [PyPI](https://pypi.org/project/failloud/)
+- **Try it in your browser:** [FailLoud Playground](https://yalakala-naveen.github.io/failloud/) — paste an agent output, get the failure report. No install, nothing uploaded.
+- **MCP Registry:** listed as `io.github.Yalakala-Naveen/failloud` in the [official MCP Registry](https://registry.modelcontextprotocol.io)
+- **Code:** https://github.com/Yalakala-Naveen/failloud
+
+## Klaviyo Bill Audit — free, in-browser
+
+**[Klaviyo Bill Audit](https://github.com/Yalakala-Naveen/klaviyo-bill-audit)** — you're paying Klaviyo for people who will never buy again. Klaviyo bills on stored profiles; profiles that stopped opening, clicking, or buying 6+ months ago still count, and enough of them quietly push a store into the next price tier. This free audit counts a store's ghost profiles and what they cost every month. It runs 100% in the browser — the export is never uploaded anywhere.
+
+- **Live tool:** https://yalakala-naveen.github.io/klaviyo-bill-audit/ (demo data: 7,130 ghosts of 12,400 profiles — $88/mo / $1,056/yr wasted)
+
+## More
+
+- **Portfolio:** https://yalakala-naveen.github.io
+- **LinkedIn:** https://www.linkedin.com/in/naveen-y-b47090122
