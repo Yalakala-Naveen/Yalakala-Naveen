@@ -28,12 +28,13 @@ Also in the box: hash-chained verification receipts (a verdict you can prove, no
 - **MCP Registry:** listed as `io.github.Yalakala-Naveen/failloud` in the [official MCP Registry](https://registry.modelcontextprotocol.io)
 - **Code:** https://github.com/Yalakala-Naveen/failloud
 
-## tidy-sheet — messy spreadsheet in, tidy DataFrame out
+## tidyexcel — messy spreadsheet in, tidy DataFrame out
 
-**[tidy-sheet](https://github.com/Yalakala-Naveen/tidysheet)** — real-world Excel/CSV exports arrive with title rows, merged multi-row headers, totals and footnote rows baked into the data, and pandas detects none of it: everyone hand-rolls the same `skiprows=`/`ffill` glue per file. tidy-sheet detects the structure — title rows, merged headers, totals, footnotes, merged data cells — and returns a clean DataFrame plus a report listing every fix. Deterministic heuristics, no AI in the path.
+ **[tidyexcel](https://github.com/Yalakala-Naveen/tidysheet)** — real-world Excel/CSV exports arrive with title rows, merged multi-row headers, totals and footnote rows baked into the data, and pandas detects none of it: everyone hand-rolls the same `skiprows=`/`ffill` glue per file. tidyexcel detects the structure — title rows, merged headers, totals, footnotes, merged data cells — and returns a clean DataFrame plus a report listing every fix. Deterministic heuristics, no AI in the path.
 
 - **Live demo (runs in your browser, nothing uploads):** https://yalakala-naveen.github.io/tidysheet/
 - **Code:** https://github.com/Yalakala-Naveen/tidysheet
+- **Install:** `pip install tidyexcel`
 
 ## Klaviyo Bill Audit — free, in-browser
 
