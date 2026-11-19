@@ -49,6 +49,13 @@ Also in the box: hash-chained verification receipts (a verdict you can prove, no
 - **Playground:** https://yalakala-naveen.github.io/scrubzero/
 - **Code:** https://github.com/Yalakala-Naveen/scrubzero
 
+## RxGuard — fraud detection with no labels
+
+**[RxGuard](https://github.com/Yalakala-Naveen/rxguard)** — prescription fraud has no labels to train on, so RxGuard detects pill mills, doctor-shopping rings, and forged-prescription bursts unsupervised: an Isolation Forest + PCA detector over prescriber behaviour, plus a graph detector (doctor-shopping windows, shared-patient clusters) over the prescriber–patient–pharmacy network, on a synthetic dataset modeled on public CMS Part D patterns. The detectors never see the injected ground truth; scored against it, the combined ranking reaches recall@20 1.00 with all 12 doctor-shoppers found — and the weak spot is printed in the README too: feature-only precision@10 is 0.30. 16/16 tests.
+
+- **Live demo (UI twin):** https://yalakala-naveen.github.io/rxguard/ — click any flagged prescriber and see exactly why it was flagged
+- **Code:** https://github.com/Yalakala-Naveen/rxguard
+
 ## Klaviyo Bill Audit — free, in-browser
 
 **[Klaviyo Bill Audit](https://github.com/Yalakala-Naveen/klaviyo-bill-audit)** — you're paying Klaviyo for people who will never buy again. Klaviyo bills on stored profiles; profiles that stopped opening, clicking, or buying 6+ months ago still count, and enough of them quietly push a store into the next price tier. This free audit counts a store's ghost profiles and what they cost every month. It runs 100% in the browser — the export is never uploaded anywhere.
