@@ -28,9 +28,17 @@ Also in the box: hash-chained verification receipts (a verdict you can prove, no
 - **MCP Registry:** listed as `io.github.Yalakala-Naveen/failloud` in the [official MCP Registry](https://registry.modelcontextprotocol.io)
 - **Code:** https://github.com/Yalakala-Naveen/failloud
 
+## RecallLint — lint your agent's memory before it lies to your agent
+
+**[RecallLint](https://github.com/Yalakala-Naveen/recalllint)** (v0.1.0) — coding agents now keep persistent memory files (`CLAUDE.md`, `AGENTS.md`, `MEMORY.md`) and treat them as ground truth, but nothing checks them: a memory learned three weeks ago can be confidently wrong after a refactor, and every agent sharing it inherits the mistake. RecallLint audits those files against the repo as it is today — dead paths, dead symbols, stale sources (per git history), unsourced claims, duplicates — with a report, `--json` output, and CI exit codes. Deterministic; no model in the verdict path. Built from the loudest stated gap in Product Hunt's agent-memory launch threads. 35/35 tests. Launched on Product Hunt Nov 20, 2026. PyPI release pending (install from the GitHub release today).
+
+- **Try it in your browser:** [RecallLint Playground](https://yalakala-naveen.github.io/recalllint/) — paste a memory file and your repo's file list, get the report. Nothing uploaded.
+- **Product Hunt:** [RecallLint on Product Hunt](https://www.producthunt.com/products/recalllint?launch=recalllint)
+- **Code:** https://github.com/Yalakala-Naveen/recalllint
+
 ## ScrubZero — coming Mon Nov 23, 2026
 
-**[ScrubZero](https://github.com/Yalakala-Naveen/scrubzero)** — zero-dependency PII and secret redaction for logs, prompts and datasets. Checksum-validated before anything is masked (Luhn for cards, mod-97 for IBANs), so a 16-digit order id survives and a real card doesn't. The lightweight redaction seat has been empty since scrubadub's last push in Sep 2023, against ≈8.6M downloads/month of counted demand (Presidio + scrubadub, pypistats Nov 2026). 32 tests passing; PyPI publish Mon Nov 23.
+**[ScrubZero](https://github.com/Yalakala-Naveen/scrubzero)** — zero-dependency PII and secret redaction for logs, prompts and datasets. Checksum-validated before anything is masked (Luhn for cards, mod-97 for IBANs), so a 16-digit order id survives and a real card doesn't. The lightweight redaction seat has been empty since scrubadub's last push in Sep 2023, against ≈8.8M downloads/month of counted demand (Presidio + scrubadub, pypistats Nov 2026). 32 tests passing; PyPI publish Mon Nov 23.
 
 - **Playground:** https://yalakala-naveen.github.io/scrubzero/
 - **Code:** https://github.com/Yalakala-Naveen/scrubzero
