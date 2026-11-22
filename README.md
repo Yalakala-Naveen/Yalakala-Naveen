@@ -36,9 +36,9 @@ Also in the box: hash-chained verification receipts (a verdict you can prove, no
 - **Product Hunt:** [RecallLint on Product Hunt](https://www.producthunt.com/products/recalllint?launch=recalllint)
 - **Code:** https://github.com/Yalakala-Naveen/recalllint
 
-## ScrubZero — coming Mon Nov 23, 2026
+## ScrubZero — v2 in build (PyPI launch held)
 
-**[ScrubZero](https://github.com/Yalakala-Naveen/scrubzero)** — zero-dependency PII and secret redaction for logs, prompts and datasets. Checksum-validated before anything is masked (Luhn for cards, mod-97 for IBANs), so a 16-digit order id survives and a real card doesn't. The lightweight redaction seat has been empty since scrubadub's last push in Sep 2023, against ≈8.8M downloads/month of counted demand (Presidio + scrubadub, pypistats Nov 2026). 32 tests passing; PyPI publish Mon Nov 23.
+**[ScrubZero](https://github.com/Yalakala-Naveen/scrubzero)** — zero-dependency PII and secret redaction for logs, prompts and datasets. Checksum-validated before anything is masked (Luhn for cards, mod-97 for IBANs), so a 16-digit order id survives and a real card doesn't. The lightweight redaction seat has been empty since scrubadub's last push in Sep 2023, against ≈8.8M downloads/month of counted demand (Presidio + scrubadub, pypistats Nov 2026). 32 tests passing; PyPI launch held under the Buyer-First model — v2 adds credential redaction (passwords, tokens, database URLs) before any publish.
 
 - **Playground:** https://yalakala-naveen.github.io/scrubzero/
 - **Code:** https://github.com/Yalakala-Naveen/scrubzero
