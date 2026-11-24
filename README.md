@@ -50,6 +50,12 @@ Also in the box: hash-chained verification receipts (a verdict you can prove, no
 - **Live demo (UI twin):** https://yalakala-naveen.github.io/rxguard/ — click any flagged prescriber and see exactly why it was flagged
 - **Code:** https://github.com/Yalakala-Naveen/rxguard
 
+## pyrecalc — in build (PyPI launch Mon Nov 30, 2026)
+
+**[pyrecalc](https://github.com/Yalakala-Naveen/pyrecalc)** — evaluate Excel formulas in Python, without Excel, and verify the workbooks your code generates. openpyxl writes formulas but never evaluates them, so a generated workbook's values are unchecked until a human opens it in Excel — and stale cached values make it silently wrong. The incumbent evaluators total ≈5.3M downloads/month (formulas + pycel + xlcalculator, pypistats Nov 2026) but are EUPL/GPL-licensed or inactive for over a year; pyrecalc is MIT and verification-first: compute in-process, override inputs with plain A1 addressing (`wb.set("Inputs!B3", 0.12)`), and `verify()` every formula cell against its cached value. 35 functions including SUMIF/COUNTIF/AVERAGEIF and SUMPRODUCT; Excel errors propagate as values; circular references are detected and reported. 14 tests passing.
+
+- **Code:** https://github.com/Yalakala-Naveen/pyrecalc
+
 ## More
 
 - **Portfolio:** https://yalakala-naveen.github.io
